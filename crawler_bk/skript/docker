@@ -1,0 +1,1 @@
+csql exec -it CassandraDB bash

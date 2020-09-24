@@ -1,0 +1,20 @@
+version: '3'
+services:
+  cassandra:
+    container_name: cassandra_instance
+    image: cassandra:3.11.7
+    ports:
+      - 9042:9042 
+    volumes:
+      - ./init.sh:/init.sh 
+      - ./cassandra_data:/var/lib/cassandra
+    entrypoint: /init.sh
+
+  zeppelin:
+    container_name: zeppelin
+    image: apache/zeppelin:0.9.0
+    ports:
+      - "8080:8080"
+      - "7077:8077"
+    volumes:
+      - ./notebook:/opt/zeppelin/notebook

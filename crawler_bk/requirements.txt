@@ -1,0 +1,5 @@
+w3lib==1.21.0
+Scrapy==1.8.0
+price_parser==0.3.3
+cassandra_driver==3.24.0
+python_dateutil==2.8.1
